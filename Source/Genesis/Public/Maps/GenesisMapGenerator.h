@@ -6,6 +6,7 @@
 #include "Maps/IslandMapGenerator.h"
 #include "GenesisMapGenerator.generated.h"
 
+DECLARE_LOG_CATEGORY_EXTERN(LogMapGen, Log, All);
 /**
  * 
  */
@@ -15,6 +16,14 @@ class GENESIS_API AGenesisMapGenerator : public AIslandMapGenerator
 	GENERATED_BODY()
 	
 	
+public:
 	
+
+	//Attempt at constructing map in editor.
+	UFUNCTION(BlueprintCallable, Category = "World Generation|Continent Generation")
+		void ConstructMap(const FIslandGeneratorDelegate onComplete);
 	
+	UFUNCTION(BlueprintCallable, Category = "World Generation|Continent Generation")
+		void ExportPolygons(FString SaveDirectory, const FString& FileName);
+
 };

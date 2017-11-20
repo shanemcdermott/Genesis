@@ -7,13 +7,26 @@
 		{
 			"Name": "Genesis",
 			"Type": "Runtime",
-			"LoadingPhase": "Default"
+			"LoadingPhase": "Default",
+			"AdditionalDependencies": [
+				"PolygonalMapGenerator"
+			]
 		}
 	],
 	"Plugins": [
 		{
 			"Name": "AppleARKit",
 			"Enabled": false
+		},
+		{
+			"Name": "PolygonalMapGenerator",
+			"Enabled": true,
+			"MarketplaceURL": "https://github.com/Jay2645/Unreal-Polygonal-Map-Gen"
+		},
+		{
+			"Name": "VictoryBPLibrary",
+			"Enabled": true,
+			"MarketplaceURL": "http://www.ue4code.com"
 		}
 	]
 }
